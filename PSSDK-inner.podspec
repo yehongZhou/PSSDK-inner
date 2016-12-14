@@ -7,14 +7,14 @@ Pod::Spec.new do |s|
 
   s.homepage     = "http://EXAMPLE/PSSDK-inner"
   
-  s.license      = "MIT (example)"
+  s.license      = "MIT"
 
   s.author             = { "nbt" => "zhouyehong@newborn-town.com" }
   
 
   s.platform     = :ios, "7.0"
 
-  s.source       = { :git => "http://EXAMPLE/PSSDK-inner.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/yehongZhou/PSSDK-inner.git", :tag => "#{s.version}" }
 
 
   s.source_files  = "PSSDK/*.{h,m}"
