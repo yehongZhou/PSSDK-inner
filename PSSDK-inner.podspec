@@ -5,11 +5,9 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/yehongZhou/PSSDK-inner"
   s.license          = 'MIT'
   s.author           = { "Ankit Thakur" => "ankitthakur85@icloud.com" }
-  s.source           = { :git => "https://github.com/yehongZhou/PSSDK-inner.git",:tag => #{s.version}}
+  s.source           = { :git => "https://github.com/yehongZhou/PSSDK-inner.git",:tag => "#{s.version}"}
   s.social_media_url = 'https://twitter.com/ankitthakur'
-
   s.platform     = :ios, "7.0"
-
   s.requires_arc = true
   s.ios.source_files = 'PSSDK/*.{h,m}'
 
