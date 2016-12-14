@@ -12,8 +12,8 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'PSSDK/*.{h,m}'
-  #s.resources = 'Pod/Assets/*'
-
-  #s.frameworks = 'UIKit', 'CoreText'
-  #s.module_name = 'Artsy_UIFonts'
+  s.vendored_libraries  = 'PSSDK/libPingStart-iOS.a'
+  s.xcconfig     = { 'OTHER_LDFLAGS' => '-ObjC'}
+  s.ios.frameworks = 'Foundation','UIKit'
+  
 end
