@@ -19,6 +19,8 @@ Pod::Spec.new do |s|
 
   s.source_files  = "PSSDK/*.{h,m}"
 
+  s.vendored_libraries  = 'PSSDK/libPingStart-iOS.a'
+
   # s.public_header_files = "Classes/**/*.h"
 
 
