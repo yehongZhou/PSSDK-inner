@@ -5,10 +5,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/yehongZhou/PSSDK-inner"
   s.license          = 'MIT'
   s.author           = { "Ankit Thakur" => "ankitthakur85@icloud.com" }
-  s.source           = {
-    :git => "https://github.com/yehongZhou/PSSDK-inner.git",
-    :tag => v#{s.version}
-  }
+  s.source           = { :git => "https://github.com/yehongZhou/PSSDK-inner.git",:tag => #{s.version}}
   s.social_media_url = 'https://twitter.com/ankitthakur'
 
   s.ios.deployment_target = "7.0"
