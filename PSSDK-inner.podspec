@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = "PSSDK/*.{h,m}"
 
-  s.vendored_libraries  = 'PSSDK/libPingStart-iOS.a'
+  #s.vendored_libraries  = 'PSSDK/libPingStart-iOS.a'
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -29,6 +29,6 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
+  #s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
 
 end
