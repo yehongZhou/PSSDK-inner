@@ -1,34 +1,23 @@
 Pod::Spec.new do |s|
-  s.name         = "PSSDK-inner"
-  s.version      = "1.0.0"
-  s.summary      = "A short description of PSSDK-inner."
-  s.description  = "PSSDK on iOS"
+  s.name             = "PSSDK-inner"
+  s.summary          = "An Objective-C library for Elliptic Curve Digital Signing Algorithm (ECDSA) and for Elliptic Curve Diffie-Hellman (ECDH)."
+  s.version          = "1.0"
+  s.homepage         = "https://github.com/yehongZhou/PSSDK-inner"
+  s.license          = 'MIT'
+  s.author           = { "Ankit Thakur" => "ankitthakur85@icloud.com" }
+  s.source           = {
+    :git => "https://github.com/yehongZhou/PSSDK-inner.git",
+    :tag => v#{s.version}
+  }
+  s.social_media_url = 'https://twitter.com/ankitthakur'
 
-  s.homepage     = "http://EXAMPLE/PSSDK-inner"
-  
-  s.license      = "MIT"
-
-  s.author             = { "nbt" => "zhouyehong@newborn-town.com" }
-  
-
-  s.platform     = :ios, "7.0"
-
-  s.source       = { :git => "https://github.com/yehongZhou/PSSDK-inner.git", :tag => "#{s.version}" }
-
-
-  s.source_files  = "PSSDK/*.{h,m}"
-
-  #s.vendored_libraries  = 'PSSDK/libPingStart-iOS.a'
-
-  # s.public_header_files = "Classes/**/*.h"
-
-
- 
-  s.libraries = "z"
-
+  s.ios.deployment_target = "7.0"
 
   s.requires_arc = true
+  s.ios.source_files = 'PSSDK/*.{h,m}'
 
-  #s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
+  s.ios.frameworks = 'UIKit', 'Foundation'
+  # s.osx.frameworks = 'Cocoa', 'Foundation'
 
+  # s.dependency 'Whisper', '~> 1.0'
 end
