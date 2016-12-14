@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PSSDK-inner"
-  s.version      = “1.0.0”
+  s.version      = "1.0.0"
   s.summary      = "A short description of PSSDK-inner."
   s.description  = "PSSDK on iOS"
 
