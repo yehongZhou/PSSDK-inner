@@ -8,7 +8,10 @@
 @class PSVideoView;
 @class PSError;
 
-@protocol PSVideoDelegate <NSObject>
+#import "PSRewardEntity.h"
+#import "PingStartDelegate.h"
+
+@protocol PSVideoDelegate <PingStartDelegate>
 
 @optional
 
@@ -18,9 +21,6 @@
 
 -(void)psAdView:(PSVideoView*)view didFailToReceiveAdWithError:(PSError*)error;
 
-//-(void)psAdViewWillPresentScreen:(PSBaseView*)view;
-//
-//-(void)psAdViewWillDismissScreen:(PSBaseView*)view;
-//
-//-(void)psAdViewDidDismissScreen:(PSBaseView *)view;
+-(void)psAdView:(PSVideoView*)view didReward:(PSRewardEntity*)reward;
+
 @end
