@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "PSSDK-inner"
-  s.version          = "1.0.1"
+  s.version          = "1.0.2"
   s.summary          = "PSSDK dev version"
   s.homepage         = "https://github.com/yehongZhou/PSSDK-inner"
   s.license          = 'Code is MIT, then custom font licenses.'
