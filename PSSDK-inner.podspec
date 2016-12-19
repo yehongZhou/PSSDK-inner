@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
+  s.frameworks   =  'CoreGraphics', 'UIKit', 'Foundation', 'QuartzCore', 'StoreKit'
   s.source_files = 'PingStart/*.{h,m}'
   s.ios.vendored_library = 'PingStart/libPingStart.a'
   s.xcconfig     = { 'OTHER_LDFLAGS' => '-ObjC'}
