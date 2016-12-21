@@ -1,11 +1,14 @@
 [![PingStart](http://www.pingstart.com/static/home/images/pingstart.png)](http://www.pingstart.com)
 
 PingStart description
+
 ## Requirements
 - iOS 7.0+
 - required ARC
 - xcode 8.0 +
+
 ## Installation
+
 ### Installation with CocoaPods
 To integrate PSSDK-iOS into your Xcode project using CocoaPods, specify it in your `Podfile`:
 ```ruby
@@ -24,22 +27,25 @@ $ pod install
 ```
 
 ## Manually, using the SDK download
+
 1. Download and unzip the PSSDK-iOS
 2. Drag the PSSDK-iOS folder into your Xcode application group (be sure to check the “Copy items into destination group’s folder” option).
 3. Add the following frameworks or libraries to your project. To do this, click on your application’s target, then click on Build Phases and expand the Link Binary With Libraries group.
-    1. requires the following frameworks:
-   - 'CoreGraphics.framework' 
-   - 'UIKit.framework'
-   - 'Foundation.framework' 
-   - 'QuartzCore.framework' 
-   - 'StoreKit.framework'
-   - 'SystemConfiguration.framework'
-   - 'CoreTelephony.framework'
-   2. requires the following libraries:
-   - libz.tbd
+    requires the following frameworks:
+   . 'CoreGraphics.framework' 
+   . 'UIKit.framework'
+   . 'Foundation.framework' 
+   . 'QuartzCore.framework' 
+   . 'StoreKit.framework'
+   . 'SystemConfiguration.framework'
+   . 'CoreTelephony.framework'
+   requires the following libraries:
+   . libz.tbd
 4. Go to Targer->Build Settings->All
    Search for "other linker flags", add "-ObjC" in other linker flags
+   
 ## Usage
+
 ### oc
 ```
 //1、property
@@ -78,6 +84,7 @@ See the finished example
 @end
 ```
 ### swift
+
 add following line to `YOUR_PROJECT-Bridging-Header.h`
 ```
 #import "PingStart.h"
