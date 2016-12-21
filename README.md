@@ -12,12 +12,7 @@ PingStart description
 ### Installation with CocoaPods
 To integrate PSSDK-iOS into your Xcode project using CocoaPods, specify it in your `Podfile`:
 ```ruby
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
-
-target 'TargetName' do
 pod 'PSSDK-iOS', '~> 1.0'
-end
 ```
 
 Then, run the following command:
@@ -74,10 +69,12 @@ See the finished example
 @implementation ViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.adView = [[PSVideoView alloc] initWithPublisherId:YOUR_PUBLISHER_ID slotId:YOUR_SLOT_ID];
     _adView.delegate = self;
     [_adView loadAd];
 }
+
 -(void)psAdViewDidReceiveAd:(PSVideoView *)view{
     [view presentFullScreen:self];
 }
