@@ -32,15 +32,15 @@ $ pod install
 2. Drag the PSSDK-iOS folder into your Xcode application group (be sure to check the “Copy items into destination group’s folder” option).
 3. Add the following frameworks or libraries to your project. To do this, click on your application’s target, then click on Build Phases and expand the Link Binary With Libraries group.
     requires the following frameworks:
-   . 'CoreGraphics.framework' 
-   . 'UIKit.framework'
-   . 'Foundation.framework' 
-   . 'QuartzCore.framework' 
-   . 'StoreKit.framework'
-   . 'SystemConfiguration.framework'
-   . 'CoreTelephony.framework'
+   1. 'CoreGraphics.framework' 
+   2. 'UIKit.framework'
+   3. 'Foundation.framework' 
+   4. 'QuartzCore.framework' 
+   5. 'StoreKit.framework'
+   6. 'SystemConfiguration.framework'
+   7. 'CoreTelephony.framework'
    requires the following libraries:
-   . libz.tbd
+   1. libz.tbd
 4. Go to Targer->Build Settings->All
    Search for "other linker flags", add "-ObjC" in other linker flags
    
