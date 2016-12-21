@@ -26,22 +26,22 @@ Then, run the following command:
 $ pod install
 ```
 
-## Manually, using the SDK download
+### Manually, using the SDK download
 
 1. Download and unzip the PSSDK-iOS
 2. Drag the PSSDK-iOS folder into your Xcode application group (be sure to check the “Copy items into destination group’s folder” option).
-3. Add the following frameworks or libraries to your project. To do this, click on your application’s target, then click on Build Phases and expand the Link Binary With Libraries group.
-    requires the following frameworks:
+3. Add the following frameworks or libraries to your project. To do this, click on your application’s target, then click on Build Phases and expand the Link Binary With Libraries group.  
+    requires the following frameworks:  
    1. 'CoreGraphics.framework' 
    2. 'UIKit.framework'
    3. 'Foundation.framework' 
    4. 'QuartzCore.framework' 
    5. 'StoreKit.framework'
    6. 'SystemConfiguration.framework'
-   7. 'CoreTelephony.framework'
+   7. 'CoreTelephony.framework'  
    requires the following libraries:
    1. libz.tbd
-4. Go to Targer->Build Settings->All
+4. Go to Targer->Build Settings->All  
    Search for "other linker flags", add "-ObjC" in other linker flags
    
 ## Usage
