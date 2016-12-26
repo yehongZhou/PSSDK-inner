@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version          = "1.0.2"
   s.summary          = "PSSDK dev version"
   s.homepage         = "https://github.com/yehongZhou/PSSDK-inner"
-  s.license          = 'Code is MIT, then custom font licenses.'
+  s.license          = 'MIT'
   s.author           = { "zhouyehong" => "zhouyehong@newborn-town.com" }
   s.source           = { :git => "https://github.com/yehongZhou/PSSDK-inner.git", :tag => s.version }
   s.social_media_url = 'http://www.pingstart.com'
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
-  s.frameworks   =  'CoreGraphics', 'UIKit', 'Foundation', 'QuartzCore', 'StoreKit', 'SystemConfiguration', 'CoreTelephony', 'AdSupport'
+  #s.frameworks   =  'CoreGraphics', 'UIKit', 'Foundation', 'QuartzCore', 'StoreKit', 'SystemConfiguration', 'CoreTelephony', 'AdSupport'
   s.source_files = 'PingStart/*.{h,m}'
   s.ios.vendored_library = 'PingStart/libPingStart.a'
   s.xcconfig     = { 'OTHER_LDFLAGS' => '-ObjC'}
