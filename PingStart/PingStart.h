@@ -9,14 +9,33 @@
 #import <Foundation/Foundation.h>
 
 #import "PSVideoView.h"
+#import "PSBannerView.h"
+#import "PSNativeView.h"
+
+#import "PSError.h"
+#import "PSErrorCode.h"
+#import "PSReward.h"
+#import "PSNativeAd.h"
+
+#import "PSVideoDelegate.h"
+#import "PSBannerDelegate.h"
+#import "PSNativeDelegate.h"
 
 @interface PingStart : NSObject
 
 +(instancetype)sharedInstance;
 
-+(void)configWithID:(NSString*)appid secret:(NSString*)secret;
+/**
+ debug mode
 
+ @param debug enable
+ */
 +(void)enableDebug:(BOOL)debug;
 
+/**
+ Ping Start SDK version
+
+ @return version
+ */
 +(NSString*)version;
 @end

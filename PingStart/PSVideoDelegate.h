@@ -6,21 +6,46 @@
 //  Copyright © 2016年 nbt. All rights reserved.
 //
 @class PSVideoView;
-@class PSError;
 
-#import "PSRewardEntity.h"
 #import "PingStartDelegate.h"
 
 @protocol PSVideoDelegate <PingStartDelegate>
 
 @optional
 
--(void)psAdViewWillLoad:(PSVideoView*)view;
+/**
+ video ad will start playing.
 
--(void)psAdViewDidReceiveAd:(PSVideoView*)view;
+ @param view videoView
+ */
+-(void)psAdViewVideoWillStartPlaying:(PSVideoView*)view;
 
--(void)psAdView:(PSVideoView*)view didFailToReceiveAdWithError:(PSError*)error;
+/**
+ video ad will close
 
--(void)psAdView:(PSVideoView*)view didReward:(PSRewardEntity*)reward;
+ @param view videoView
+ */
+-(void)psAdViewVideoWillClosePlaying:(PSVideoView*)view;
 
+/**
+ Called when the full screen
+ 
+ @param view PSVideoView
+ */
+-(void)psAdViewWillPresentScreen:(PSVideoView*)view;
+
+/**
+ Called when the dismiss
+ 
+ @param view PSVideoView
+ */
+-(void)psAdViewWillDismissScreen:(PSVideoView*)view;
+
+/**
+ Get rewarded
+ 
+ @param view baseAdView
+ @param reward reward
+ */
+-(void)psAdView:(PSBaseView*)view didReward:(PSReward*)reward;
 @end

@@ -10,11 +10,12 @@
 #define PSErrorCode_h
 
 typedef NS_ENUM(NSInteger,PSErrorCode) {
-    PSErrorGeneral = 1,                      /*一般错误*/
-    PSErrorNetworkUnavailable,               /*网络不可用*/
-    PSErrorAdUnavailable,                    /*广告不可用*/
-    PSErrorUnZip,                            /*文件解压错误*/
-    PSErrorFrequencyLimit                    /*超过每日播放频率限制*/
+    PSErrorGeneral = 1,                      /*General*/
+    PSErrorNetworkUnavailable,               /*Network unavailable*/
+    PSErrorAdUnavailable,                    /*Ad unavailable*/
+    PSErrorSlotIdOrPublisherIdUnavailable,   /*Corresponding ad is not available by slotId and publisherId*/
+    PSErrorUnZip,                            /*File decompression error*/
+    PSErrorFrequencyLimit                    /*More than the daily playback frequency limit*/
 };
 
 #endif /* PSErrorCode_h */

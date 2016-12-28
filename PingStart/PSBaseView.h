@@ -10,18 +10,28 @@
 
 @interface PSBaseView : UIView
 
-@property(nonatomic,weak,readonly,nullable)UIViewController *rootViewController;
-
+/**
+ publisher id
+ */
 @property(nonatomic,copy,nonnull)IBInspectable NSString *publisherId;
-//位置id
+
+/**
+ slot id
+ */
 @property(nonatomic,copy,nonnull)IBInspectable NSString *slotId;
 
+/**
+ init
 
+ @param publisherId publisher id
+ @param slotId slot id
+ @return instance
+ */
 -(nullable instancetype)initWithPublisherId:(nonnull NSString*)publisherId slotId:(nonnull NSString*)slotId;
 
-//加载广告
+/**
+ Starts the ad load request
+ */
 -(void)loadAd;
 
-//全屏显示广告
--(void)presentFullScreen:(nonnull UIViewController*)rootViewController;
 @end

@@ -7,24 +7,34 @@
 //
 
 @class PSBaseView;
+@class PSReward;
+@class PSError;
 
 @protocol PingStartDelegate <NSObject>
 
 @optional
-/**
- Called when the full screen（by presentFullScreen:）
- 
- @param view PSVideoView
- */
--(void)psAdViewWillPresentScreen:(PSBaseView*)view;
 
 /**
- Called when the dismiss（by presentFullScreen:）
- 
- @param view PSVideoView
- */
--(void)psAdViewWillDismissScreen:(PSBaseView*)view;
+ Start loading ad data
 
+ @param view baseAdView
+ */
+-(void)psAdViewWillLoad:(PSBaseView*)view;
+
+/**
+ Ad data is loaded
+
+ @param view baseAdView
+ */
+-(void)psAdViewDidReceiveAd:(PSBaseView*)view;
+
+/**
+ Ad data loading failed
+
+ @param view baseAdView
+ @param error reason
+ */
+-(void)psAdView:(PSBaseView*)view didFailToReceiveAdWithError:(PSError*)error;
 
 @end
 
