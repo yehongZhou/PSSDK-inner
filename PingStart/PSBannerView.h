@@ -14,5 +14,8 @@
  */
 @interface PSBannerView : PSBaseView
 
+/**
+ PSBannerDelegate
+ */
 @property(nonatomic,weak)id<PSBannerDelegate> delegate;
 @end

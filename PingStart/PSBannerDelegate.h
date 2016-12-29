@@ -10,17 +10,17 @@
 @class PSBannerView;
 
 /**
- The delegate of the banner ad
+ Banner ad delegate
  */
 @protocol PSBannerDelegate <PingStartDelegate>
 
 @optional
 
 /**
- Banner is loaded, the height of the banner
+ Banner is loaded, Now is the best time to display or update its frame
 
  @param view PSBannerView
- @param height banner height
+ @param height The actual height of the banner,You should modify the height of the banner based on the height returned.
  */
 -(void)psAdViewBanner:(PSBannerView*)view didLoadWithHeight:(CGFloat)height;
 

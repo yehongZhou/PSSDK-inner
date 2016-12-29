@@ -14,5 +14,8 @@
  */
 @interface PSNativeView : PSBaseView
 
+/**
+ PSNativeDelegate
+ */
 @property(nonatomic,weak)id<PSNativeDelegate> delegate;
 @end

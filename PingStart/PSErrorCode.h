@@ -9,13 +9,22 @@
 #ifndef PSErrorCode_h
 #define PSErrorCode_h
 
+/**
+ PingStart error code
+ */
 typedef NS_ENUM(NSInteger,PSErrorCode) {
-    PSErrorGeneral = 1,                      /*General*/
-    PSErrorNetworkUnavailable,               /*Network unavailable*/
-    PSErrorAdUnavailable,                    /*Ad unavailable*/
-    PSErrorSlotIdOrPublisherIdUnavailable,   /*Corresponding ad is not available by slotId and publisherId*/
-    PSErrorUnZip,                            /*File decompression error*/
-    PSErrorFrequencyLimit                    /*More than the daily playback frequency limit*/
+    ///General
+    PSErrorGeneral = 1,
+    ///Network unavailable
+    PSErrorNetworkUnavailable,
+    ///Ad data is not available
+    PSErrorAdUnavailable,
+    ///Corresponding ad is not available by slotId and publisherId
+    PSErrorSlotIdOrPublisherIdUnavailable,
+    ///File decompression error
+    PSErrorUnZip,
+    ///Exceeds the upper limit of the daily display of the slot
+    PSErrorFrequencyLimit
 };
 
 #endif /* PSErrorCode_h */

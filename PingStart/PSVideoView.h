@@ -8,18 +8,16 @@
 
 #import "PSBaseView.h"
 #import "PSVideoDelegate.h"
+#import "PSPresentProtocol.h"
 
 /**
  Video ad view
  */
-@interface PSVideoView : PSBaseView
-
-@property(nonatomic,weak)id<PSVideoDelegate> delegate;
+@interface PSVideoView : PSBaseView<PSPresentProtocol>
 
 /**
- present this view
- 
- @param rootViewController view controller
+ PSVideoDelegate
  */
--(void)presentToViewController:(UIViewController*)rootViewController;
+@property(nonatomic,weak)id<PSVideoDelegate> delegate;
+
 @end

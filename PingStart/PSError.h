@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "PSErrorCode.h"
 
+/**
+ PingStart error
+ */
 @interface PSError : NSObject
 
 /*!

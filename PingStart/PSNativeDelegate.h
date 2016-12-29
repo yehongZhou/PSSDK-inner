@@ -11,14 +11,14 @@
 @class PSNativeAd;
 
 /**
- The delegate of the banner ad
+ Native ad delegate
  */
 @protocol PSNativeDelegate <PingStartDelegate>
 
 @optional
 
 /**
- Native is loaded
+ Native is loaded,You can now customize the view to display ad data.
  
  @param view PSNativeView
  @param nativeAd PSNativeAd

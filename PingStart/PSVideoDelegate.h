@@ -8,17 +8,21 @@
 @class PSVideoView;
 
 #import "PingStartDelegate.h"
+#import "PSPresentDelegate.h"
 
-@protocol PSVideoDelegate <PingStartDelegate>
+/**
+ Video ad delegate
+ */
+@protocol PSVideoDelegate <PingStartDelegate,PSPresentDelegate>
 
 @optional
 
 /**
- video ad will start playing.
+ The video ad is loaded and ready to play.Now is the best time to present the view
 
  @param view videoView
  */
--(void)psAdViewVideoWillStartPlaying:(PSVideoView*)view;
+-(void)psAdViewVideoDidLoad:(PSVideoView*)view;
 
 /**
  video ad will close
@@ -28,21 +32,7 @@
 -(void)psAdViewVideoWillClosePlaying:(PSVideoView*)view;
 
 /**
- Called when the full screen
- 
- @param view PSVideoView
- */
--(void)psAdViewWillPresentScreen:(PSVideoView*)view;
-
-/**
- Called when the dismiss
- 
- @param view PSVideoView
- */
--(void)psAdViewWillDismissScreen:(PSVideoView*)view;
-
-/**
- Get rewarded
+ Called when a video ad with a reward is played
  
  @param view baseAdView
  @param reward reward

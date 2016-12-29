@@ -11,6 +11,8 @@
 #import "PSVideoView.h"
 #import "PSBannerView.h"
 #import "PSNativeView.h"
+#import "PSMultiNativeView.h"
+#import "PSInterstitialView.h"
 
 #import "PSError.h"
 #import "PSErrorCode.h"
@@ -20,9 +22,20 @@
 #import "PSVideoDelegate.h"
 #import "PSBannerDelegate.h"
 #import "PSNativeDelegate.h"
+#import "PSMultiNativeDelegate.h"
+#import "PSInterstitialDelegate.h"
 
+
+/**
+ PingStart
+ */
 @interface PingStart : NSObject
 
+/**
+ Singleton
+
+ @return PingStart
+ */
 +(instancetype)sharedInstance;
 
 /**

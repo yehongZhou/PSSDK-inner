@@ -6,10 +6,16 @@
 //  Copyright © 2016年 nbt. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
 @class PSBaseView;
 @class PSReward;
 @class PSError;
 
+/**
+ PingStart base delegate
+ */
 @protocol PingStartDelegate <NSObject>
 
 @optional
@@ -22,14 +28,7 @@
 -(void)psAdViewWillLoad:(PSBaseView*)view;
 
 /**
- Ad data is loaded
-
- @param view baseAdView
- */
--(void)psAdViewDidReceiveAd:(PSBaseView*)view;
-
-/**
- Ad data loading failed
+ There was an error loading ad data
 
  @param view baseAdView
  @param error reason
