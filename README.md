@@ -1,9 +1,7 @@
 [![PingStart](http://www.pingstart.com/static/home/images/pingstart.png)](http://www.pingstart.com)
 
-PingStart description
-
 ## Requirements
-- iOS 7.0+
+- iOS 8.0+
 - required ARC
 - xcode 8.0 +
 
@@ -12,7 +10,7 @@ PingStart description
 ### Installation with CocoaPods
 To integrate PSSDK-iOS into your Xcode project using CocoaPods, specify it in your `Podfile`:
 ```ruby
-pod 'PSSDK-iOS', '~> 1.0'
+pod 'PSSDK-iOS'
 ```
 
 Then, run the following command:
@@ -33,7 +31,9 @@ $ pod install
       4. 'QuartzCore.framework' 
       5. 'StoreKit.framework'
       6. 'SystemConfiguration.framework'
-      7. 'CoreTelephony.framework'  
+      7. 'CoreTelephony.framework'
+      8. 'Security.framework' 
+      9. 'AdSupport.framework' 
    2. requires the following libraries:
       1. libz.tbd
 4. Go to Targer->Build Settings->All  
@@ -52,8 +52,8 @@ _adView.delegate = self;
 [_adView loadAd];
     
 //3、delegate
--(void)psAdViewDidReceiveAd:(PSVideoView *)view{
-    [view presentFullScreen:self];
+-(void)psAdViewVideoDidLoad:(PSVideoView*)view{
+    [view presentToViewController:self];
 }
 ***other delegate***
 ```
@@ -75,8 +75,8 @@ See the finished example
     [_adView loadAd];
 }
 
--(void)psAdViewDidReceiveAd:(PSVideoView *)view{
-    [view presentFullScreen:self];
+-(void)psAdViewVideoDidLoad:(PSVideoView *)view{
+    [view presentToViewController:self];
 }
 @end
 ```
@@ -89,16 +89,16 @@ add following line to `YOUR_PROJECT-Bridging-Header.h`
 
 ```
 //1、property
-var adView : PSVideoView!
+var adView : PSVideoView?
 
 //2、init
 adView = PSVideoView(publisherId:YOUR_PUBLISHER_ID,slotId:YOUR_SLOT_ID)
-adView.delegate = self
-adView.loadAd()
+adView?.delegate = self
+adView?.loadAd()
     
 //3、delegate
-func psAdViewDidReceiveAd(_ view: PSVideoView!) {
-    view.presentFullScreen(self)
+func psAdViewVideoDidLoad(_ view: PSVideoView) {
+    view.present(to: self)
 }
 ***other delegate***
 ```
@@ -107,19 +107,19 @@ See the finished example
 import UIKit
 
 class ViewController: UIViewController,PSVideoDelegate {
-    var adView : PSVideoView!
+    var adView : PSVideoView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         PingStart.enableDebug(true)
         
-        adView = PSVideoView(publisherId:YOUR_PUBLISHER_ID,slotId:YOUR_SLOT_ID)
-        adView.delegate = self
-        adView.loadAd()
+        adView = PSVideoView(publisherId: YOUR_PUBLISHER_ID, slotId: YOUR_SLOT_ID)
+        adView?.delegate = self
+        adView?.loadAd()
     }
 
-    func psAdViewDidReceiveAd(_ view: PSVideoView!) {
-        view.presentFullScreen(self)
+    func psAdViewVideoDidLoad(_ view: PSVideoView) {
+        view.present(to: self)
     }
 }
 ```
