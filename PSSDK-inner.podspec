@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
     s.subspec 'Default' do |ss|
     ss.preserve_paths  = 'PingStart/NbtPingStart.framework'
-#ss.source_files = 'PingStart/NbtPingStart.framework/Headers/*.h'
+    ss.source_files = 'PingStart/NbtPingStart.framework/Headers/*.h'
     ss.public_header_files  = 'PingStart/NbtPingStart.framework/Headers/*.h'
     ss.ios.vendored_frameworks  = 'PingStart/NbtPingStart.framework'
     end
